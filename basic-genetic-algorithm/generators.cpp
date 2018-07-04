@@ -86,7 +86,7 @@ void generateRows(int rows[][ROWSIZE], int number) {
 // Generate random rows
 void generateRandomRows(int rows[][ROWSIZE], int number) {
   int i, j;
-  srand(time(NULL));
+  srand(1);
   for (i = 0; i < number; ++i) {
     for (j = 0; j < ROWSIZE; j++) {
       rows[i][j] = rand()%2;
