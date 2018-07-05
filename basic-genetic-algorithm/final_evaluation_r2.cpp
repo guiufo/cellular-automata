@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
   }
 
   free(binArray);
-  printf("Acerto: %.2f%%\n", counter/100);
+  printf("%s\t%06.2f%%\n", argv[1], counter/100);
 
   return 0;
 }
