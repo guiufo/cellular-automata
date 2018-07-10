@@ -1,6 +1,6 @@
 #include "types.h"
 
-// Print given row
+// Imprime um reticulado
 void printRow(int row[]) {
   for(int i=0; i<ROWSIZE; i++) {
     if(row[i] == 1) printf("\u2588");
@@ -9,7 +9,7 @@ void printRow(int row[]) {
   printf("\n");
 }
 
-// Verify if a rule converges to sync
+// Verifica a convergência comparando dois reticulados
 int checkSync(int firstRow[ROWSIZE], int secondRow[ROWSIZE]) {
   int i;
   if(firstRow[0] == 0) {

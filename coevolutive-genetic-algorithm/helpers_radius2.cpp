@@ -6,10 +6,13 @@ void checkPopulation2(int rows[][ROWSIZE], Individual2 population[], int initInd
   int syncRowTwo[ROWSIZE];
   int initialRow[ROWSIZE];
   int i, currentRule, currentRow, currentStep;
-  for(i=0; i<100; i++) population[i].fitness = 0; // Reset fitness
+  // Reset fitness
+  for(i=0; i<100; i++) population[i].fitness = 0;
   for(currentRule=initIndex; currentRule<=endIndex; currentRule++) {
+    // Executa uma regra sobre os 100 reticulados
     for(currentRow=0; currentRow<100; currentRow++) {
       memcpy(initialRow, rows[currentRow], ROWSIZE*sizeof(int));
+      // Evolui o autômato celular 300 vezes
       for(currentStep=0; currentStep<300; currentStep++) {
         nextRow2(initialRow, population[currentRule].cromossome);
         if(currentStep == 298) memcpy(syncRowOne, initialRow, ROWSIZE*sizeof(int));
@@ -20,7 +23,7 @@ void checkPopulation2(int rows[][ROWSIZE], Individual2 population[], int initInd
   }
 }
 
-// Scroll given rule 3 for numberOfRow times
+// Mostra a evolução de uma regra, imprimindo cada reticulado com um delay
 void scrollRule2(int *rule, int numberOfRows) {
   Individual2 population[1];
   int row[1][ROWSIZE];

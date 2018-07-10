@@ -1,5 +1,4 @@
 // Program to evaluate rule of radius 2 given 10k initial random row
-
 #include "types.h"
 #include "experiments.cpp"
 #define ROWS 10000
@@ -11,6 +10,7 @@ int main(int argc, char *argv[]) {
   int syncRowOne[ROWSIZE];
   int syncRowTwo[ROWSIZE];
   int initialRow[ROWSIZE];
+  // Número para contagem de sincronizações em 10.000 reticulados
   float counter = 0;
 
   binArray = intToBinArray(argv[1]);

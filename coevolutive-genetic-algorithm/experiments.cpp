@@ -10,6 +10,7 @@ void experimentRadius2(char *fileToWrite) {
   int i, j, generation;
   int rows[100][ROWSIZE];
   int randFatherOne, randFatherTwo;
+  int randNumber1, randNumber2;
 
   // Begin Genetic Algorithm
   // Generate initial population
@@ -25,8 +26,14 @@ void experimentRadius2(char *fileToWrite) {
     srand(time(NULL));
     for(i=0; i<89; i+=2) {
       // Select two random fathers among 10 best
-      randFatherOne = (rand() % 10) + 90;
-      randFatherTwo = (rand() % 10) + 90;
+      randNumber1 = (rand() % 10) + 90;
+      randNumber2 = (rand() % 10) + 90;
+      while(randNumber1 == randNumber2) {
+        randNumber1 = (rand() % 10) + 90;
+        randNumber2 = (rand() % 10) + 90;
+      }
+      randFatherOne = randNumber1;
+      randFatherTwo = randNumber2;
       // Makes crossover
       crossOver2(
         population[randFatherOne].cromossome, population[randFatherTwo].cromossome,
@@ -60,8 +67,6 @@ void experimentRadius3(char *fileToWrite) {
   // Generate initial population
   generateRules3(population, 100);
   for(generation=0; generation<NGENERATIONS; generation++) {
-    // Reset fitness
-    for(i=0; i<100; i++) population[i].fitness = 0;
     generateRows(rows, 100);
     checkPopulation3(rows, population, 0, 99);
     insertionSort3(population, 0, 99);

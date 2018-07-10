@@ -86,6 +86,7 @@ void generateRows(int rows[][ROWSIZE], int number) {
 // Generate random rows
 void generateRandomRows(int rows[][ROWSIZE], int number) {
   int i, j;
+  // Usando seed fixo para manter consistência entre experimentos
   srand(1);
   for (i = 0; i < number; ++i) {
     for (j = 0; j < ROWSIZE; j++) {
@@ -97,6 +98,7 @@ void generateRandomRows(int rows[][ROWSIZE], int number) {
 //***********************************************
 // Generators of next row of cellular automata
 //***********************************************
+
 void nextRow2(int row[ROWSIZE], int rule[RULESIZE2]) {
   int i, key;
   int newRow[ROWSIZE];
