@@ -62,6 +62,7 @@ void experimentRadius3(char *fileToWrite) {
   int i, j, generation;
   int rows[100][ROWSIZE];
   int randFatherOne, randFatherTwo;
+  int randNumber1, randNumber2;
 
   // Begin Genetic Algorithm
   // Generate initial population
@@ -74,9 +75,19 @@ void experimentRadius3(char *fileToWrite) {
     // Simple crossover and elitism
     srand(time(NULL));
     for(i=0; i<89; i+=2) {
-      randFatherOne = (rand() % 90) + 10;
-      randFatherTwo = (rand() % 90) + 10;
-      crossOver3(population[randFatherOne].cromossome, population[randFatherTwo].cromossome, population[i].cromossome, population[i+1].cromossome);
+      // Select two random fathers among 10 best
+      randNumber1 = (rand() % 10) + 90;
+      randNumber2 = (rand() % 10) + 90;
+      while(randNumber1 == randNumber2) {
+        randNumber1 = (rand() % 10) + 90;
+        randNumber2 = (rand() % 10) + 90;
+      }
+      randFatherOne = randNumber1;
+      randFatherTwo = randNumber2;
+      crossOver3(
+        population[randFatherOne].cromossome, population[randFatherTwo].cromossome,
+        population[i].cromossome, population[i+1].cromossome
+      );
       mutate3(population[i].cromossome);
       mutate3(population[i+1].cromossome);
     }
