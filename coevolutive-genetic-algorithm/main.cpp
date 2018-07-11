@@ -26,17 +26,19 @@ int main(int argc, char *argv[]) {
   // Imprime cabeçalho com parâmetros de uma execução
   fp = fopen(argv[1], "a");
   fprintf(fp, "*************************************\n");
-  fprintf(fp, "*\t%d Experimentos de Raio %d\n", experiments, radius);
-  fprintf(fp, "*************************************\n");
-  fprintf(fp, "*\tNúmero de gerações: %d\n", NGENERATIONS);
-  fprintf(fp, "*\tReticulados iniciais: %d\n", NROWS);
-  fprintf(fp, "*\tTaxa de mutação: %f\n", MUTATIONRATE);
+  fprintf(fp, "*\t\t%d Execuções de Raio %d\n", experiments, radius);
+  fprintf(fp, "*************************************\n*\n");
+  fprintf(fp, "*\n");
+  fprintf(fp, "*\t\tNúmero de gerações: %d\n", NGENERATIONS);
+  fprintf(fp, "*\t\tReticulados iniciais: %d\n", NROWS);
+  fprintf(fp, "*\t\tTaxa de mutação: %f\n", MUTATIONRATE);
+  fprintf(fp, "*\n");
   fclose(fp);
 
   // Realiza os experimentos de acordo com raio
   for(i=0; i<experiments; i++) {
     fp = fopen(argv[1], "a");
-    fprintf(fp, "*---------- Experimento %d -----------\n", i+1);
+    fprintf(fp, "*---------- Execução %d -----------\n", i+1);
     fclose(fp);
     if(radius == 2) experimentRadius2(argv[1]);
     if(radius == 3) experimentRadius3(argv[1]);
