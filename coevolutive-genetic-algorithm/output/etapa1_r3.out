@@ -2,7 +2,6 @@
 *		30 Execuções de Raio 3
 *************************************
 *
-*
 *		Número de gerações: 100
 *		Reticulados iniciais: 100
 *		Taxa de mutação: 0.016000
@@ -47,3 +46,97 @@ fffff7fffffffffff9efbf7f3fffffbf 0
 fe7befbaffffffffffffdf8effff7ffe 0
 afdbff7feffffffffffffff7fffffffd 0
 *---------- Execução 11 -----------
+3d7ff669dbffdfdf7bfbefeefdffff7f 23
+3d7ff769dbffdfdf7bfbefeefdffff7f 23
+*---------- Execução 12 -----------
+27d9fc7dd53f9e5ff97ed72fbafeeb67 4
+27d9fc7dd51f9e5ff9fed72fbefeeb67 94
+*---------- Execução 13 -----------
+ffdffffb4fffff7eff3fa3fbf7dffebd 0
+dffffdfb5bfff5f7fd7bf7fff7ffcffd 0
+efd7ffffdfb7ffcfdffff7feefd7f7fd 0
+ff9fffb7dffbef7ffd7ff7fffddfdefd 0
+eff7ffb7fffbef7ffdfffffffdffdeff 0
+f3e667d7fffeb7fff7ffffffbfffbfff 0
+dfdffffb6fffff7effbfabfbf7fffebf 0
+fbeffffffdfffdffff7dffffffedffdf 0
+dfff7fffbdfffffffdddbf7fffff7dff 0
+bfffffbffffffdfeefd7fdff7fffff5d 0
+fffffdfb7bfff5f7fdfbfffff7dfcfff 0
+ffefffbffff9ffff7dfbbcfffeafffff 0
+fefbfbffff7ffffffcf79febdff7ffbf 0
+ffbfffffffb7ffcfdf7ffffeeff7f7ff 0
+*---------- Execução 14 -----------
+7ffff3c7f153fbd7bdbfdfc476cf9ebf 35
+7ffff3cff953fbd7bdbfdfc476cf9ebf 66
+*---------- Execução 15 -----------
+62dffbf9bf34deb771f75bfa6fdf7efb 51
+62dffbf9bf34debf71f7dbfa6fdf7efb 96
+*---------- Execução 16 -----------
+76f5ff3f737deddf76ff577fe6d5fff7 0
+76f5ffbf737deddf76ff577feed5ffff 85
+*---------- Execução 17 -----------
+5ef9d7667dc75ff397cf7d5bfffd99bf 96
+5ef9c7667dc75ff397cf7d5bfffd99bf 98
+*---------- Execução 18 -----------
+6de9f6bbd9afbfb7ff77bfdb7fefcedf 3
+6de9f6bbd9afbfb7ff77bfdbffffcedf 40
+*---------- Execução 19 -----------
+5f95ee9d9fdf7aabfb5fff3a0fdfff7f 99
+5f95eedd9fdf7aabfb5fff3a0fdfff7f 99
+*---------- Execução 20 -----------
+7ffd283f69a7bf95f7f53f9ffecbafeb 17
+7ffd283f69a73f95f7f53f9fffcbafeb 96
+*---------- Execução 21 -----------
+f8bdf5fffb779bfbdff79fffd6ffffbc 0
+bdffddbef7fbffffbbe7f7fdf7fffaff 0
+ff7ffdfeffffffdffdf7dffff7feafff 0
+ffffefffff3fffefff36d2efd7fffbfe 0
+ffffedffff3fffefff3ef2efdffeafff 0
+7bfffee6ffffffeffffbedfffcff67bf 0
+fffffffbfbffdfedfffff3dfff75ff7f 0
+ffe9ffffff5fffbff5ebebf7ffffff3e 0
+f8bdf7fffb779bfbdfffbfffdffffaff 0
+fffbffdddffffff7dfaffffff7ffebfe 0
+bfeefffff7fffffffffffffbf5f1fbdf 0
+bdffdfbef7fbffffbbefd7fdfeffffbc 0
+dffeebf777bfffffffeffbefff2fffff 0
+ff7ffffeffffffdffdfffffffffffbfe 0
+*---------- Execução 22 -----------
+7ffe1e373faf5fe7fcf355ff5e3fe5ef 92
+7ffe1eb73faf5fe7fcf355ff5e3fe5ef 100
+*---------- Execução 23 -----------
+71e9cff1f6ddef8dbdffdf7f7bec7eef 71
+71ebcff1f6ddef8df5ffdf7ffbec7eef 100
+*---------- Execução 24 -----------
+fffeffb7dfffdd5affffddfdfbfbfbff 0
+ebbfe7f7fffffff7f4f6f7bfefcffbfd 0
+f7fdf3ffdff7ff7fdeeff77fdffbfbcf 0
+fff7fffefbfbf5b7fff7f7ff7ffdfbff 0
+fff7fffefbfbf5b7feefff7fdffbffcf 0
+dfffcfffe77ffff7fffffd7fffffff7f 0
+ffffffff5efdffffffffffdeefffffff 0
+ebbfe7f7fffffff7ffffd5fdfbfbffff 0
+f7fdf3ffdff7ff7fdff7ffff7ffdffff 0
+ffffffffdbfffdf7fefefdffbfff7dfb 0
+fffeffb7dfffdd5af4f6ffbfefcffffd 0
+fff7f7ffffffdfbfbddfdffff7f7ffff 0
+ffcfffefbdfd5fe5fffefffffdd7effb 0
+fffffffbefd7fffff7f7fb3fdff6fffb 0
+*---------- Execução 25 -----------
+61cffab5d6b7e271feffadfecd77fcdb 100
+61cffab1d7b7e271feffadfecd77fcdb 100
+*---------- Execução 26 -----------
+57c5fbdf911db27bfd7fffef4d9ff77f 3
+57c5fbdf951db27bfd7fffef4d9fff7f 92
+*---------- Execução 27 -----------
+75fefbd36b691fff553d1f54e7f9facb 0
+777efbd36b691fff553d1f75e7f9facb 93
+*---------- Execução 28 -----------
+77dbdf53de7ddbf9fdf7cfff3dbfff7b 97
+*---------- Execução 29 -----------
+75f9fdbdee3c9675ffb7f72efff7b8ff 90
+75f9fdfdce3cb775ffb7f72effd7b8ff 100
+*---------- Execução 30 -----------
+2fbd6da6ff6f6b1f7ca75fcdcc4febef 1
+6fbd6de6ff6f6b1f7ca75fcdcc4febef 85
