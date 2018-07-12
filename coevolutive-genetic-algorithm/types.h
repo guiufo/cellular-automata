@@ -38,4 +38,9 @@ typedef struct{
   int fitness = 0;
 }Individual3;
 
+typedef struct{
+  int cromossome[ROWSIZE];
+  int fitness = 0;
+}Lattice;
+
 #endif /* !TYPES_H */

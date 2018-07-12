@@ -83,6 +83,24 @@ void generateRows(int rows[][ROWSIZE], int number) {
   }
 }
 
+// Generate uniform distributed random rows
+void generateRowsPopulation(Lattice latticePopulation[], int number) {
+  int i, j;
+  double step = 1/number;
+  double randNumber;
+  double pzero = 0.1;
+
+  srand(time(NULL));
+
+  for (i = 0; i < number; ++i) {
+    for (j = 0; j < ROWSIZE; j++) {
+      randNumber = (double)rand() / (double)RAND_MAX ;
+      if(randNumber > pzero) latticePopulation[i].cromossome[j] = 1;
+      else latticePopulation[i].cromossome[j] = 1;
+    }
+  }
+}
+
 // Generate random rows
 void generateRandomRows(int rows[][ROWSIZE], int number) {
   int i, j;

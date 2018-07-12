@@ -5,6 +5,52 @@ void checkPopulation2(int rows[][ROWSIZE], Individual2 population[], int initInd
   int syncRowOne[ROWSIZE];
   int syncRowTwo[ROWSIZE];
   int initialRow[ROWSIZE];
+  int i, currentRule, currentRow, currentStep;
+  // Reset fitness
+  for(i=0; i<100; i++) population[i].fitness = 0;
+  for(currentRule=initIndex; currentRule<=endIndex; currentRule++) {
+    // Executa uma regra sobre os 100 reticulados
+    for(currentRow=0; currentRow<100; currentRow++) {
+      memcpy(initialRow, rows[currentRow], ROWSIZE*sizeof(int));
+      // Evolui o autômato celular 300 vezes
+      for(currentStep=0; currentStep<300; currentStep++) {
+        nextRow2(initialRow, population[currentRule].cromossome);
+        if(currentStep == 298) memcpy(syncRowOne, initialRow, ROWSIZE*sizeof(int));
+        if(currentStep == 299) memcpy(syncRowTwo, initialRow, ROWSIZE*sizeof(int));
+      }
+      population[currentRule].fitness += checkSync(syncRowOne, syncRowTwo);
+    }
+  }
+}
+
+// Runs a rule against an array of initial rows and calculate its fitness
+void checkPopulationsRadius2(Lattice latticePopulation[], Individual2 population[], int initIndex, int endIndex) {
+  int syncRowOne[ROWSIZE];
+  int syncRowTwo[ROWSIZE];
+  int initialRow[ROWSIZE];
+  int i, currentRule, currentRow, currentStep;
+  // Reset fitness
+  for(i=0; i<100; i++) population[i].fitness = 0;
+  for(currentRule=initIndex; currentRule<=endIndex; currentRule++) {
+    // Executa uma regra sobre os 100 reticulados
+    for(currentRow=0; currentRow<100; currentRow++) {
+      memcpy(initialRow, latticePopulation[currentRow].cromossome, ROWSIZE*sizeof(int));
+      // Evolui o autômato celular 300 vezes
+      for(currentStep=0; currentStep<300; currentStep++) {
+        nextRow2(initialRow, population[currentRule].cromossome);
+        if(currentStep == 298) memcpy(syncRowOne, initialRow, ROWSIZE*sizeof(int));
+        if(currentStep == 299) memcpy(syncRowTwo, initialRow, ROWSIZE*sizeof(int));
+      }
+      population[currentRule].fitness += checkSync(syncRowOne, syncRowTwo);
+    }
+  }
+}
+
+// Runs a rule against an array of initial rows and calculate its fitness
+void checkPopulation2Shared(int rows[][ROWSIZE], Individual2 population[], int initIndex, int endIndex) {
+  int syncRowOne[ROWSIZE];
+  int syncRowTwo[ROWSIZE];
+  int initialRow[ROWSIZE];
   int i, j, row, column, check;
   int currentRule, currentRow, currentStep;
   // Matriz de recurso compartilhado

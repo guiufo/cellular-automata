@@ -177,7 +177,8 @@ char* hexToBinArray(char *input) {
           strcat(bin, "1111");
           break;
       default:
-          printf("Invalid hexadecimal input.");
+          strcat(bin, "0000");
+          break;
     }
   }
 
