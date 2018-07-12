@@ -5,7 +5,12 @@ void checkPopulation2(int rows[][ROWSIZE], Individual2 population[], int initInd
   int syncRowOne[ROWSIZE];
   int syncRowTwo[ROWSIZE];
   int initialRow[ROWSIZE];
-  int i, currentRule, currentRow, currentStep;
+  int i, j, row, column, check;
+  int currentRule, currentRow, currentStep;
+  // Matriz de recurso compartilhado
+  // Reticulados (Linhas) X Regras (Colunas)
+  int sharedResource[101][101] = {0};
+
   // Reset fitness
   for(i=0; i<100; i++) population[i].fitness = 0;
   for(currentRule=initIndex; currentRule<=endIndex; currentRule++) {
@@ -18,9 +23,22 @@ void checkPopulation2(int rows[][ROWSIZE], Individual2 population[], int initInd
         if(currentStep == 298) memcpy(syncRowOne, initialRow, ROWSIZE*sizeof(int));
         if(currentStep == 299) memcpy(syncRowTwo, initialRow, ROWSIZE*sizeof(int));
       }
-      population[currentRule].fitness += checkSync(syncRowOne, syncRowTwo);
+      // Preenche matriz de recurso compartilhado
+      check = checkSync(syncRowOne, syncRowTwo);
+      sharedResource[currentRow][currentRule] = check;
+      if(check == 0) sharedResource[currentRow][100] += 1;
+      sharedResource[100][currentRule] += check;
     }
   }
+  // Calcula fitness das regras
+  for(column=0; column<100; column++) {
+    for(row=0; row<100; row++) {
+      if(sharedResource[row][column]) {
+        population[column].fitness += sharedResource[row][100];
+      }
+    }
+  }
+
 }
 
 // Mostra a evolução de uma regra, imprimindo cada reticulado com um delay

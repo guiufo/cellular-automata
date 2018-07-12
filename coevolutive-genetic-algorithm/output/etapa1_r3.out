@@ -1,0 +1,49 @@
+*************************************
+*		30 Execuções de Raio 3
+*************************************
+*
+*
+*		Número de gerações: 100
+*		Reticulados iniciais: 100
+*		Taxa de mutação: 0.016000
+*
+*---------- Execução 1 -----------
+7f7b2e75dd677775ff1ff739bd4fefff 100
+*---------- Execução 2 -----------
+75afff7f3fe5e4fdda75fff7df9ff3df 77
+75afff7f3fe5e4fdda77fff7df9ffbdf 79
+*---------- Execução 3 -----------
+63f9d5bdfeffb1f9f1a7bae7e9df77ef 6
+63f9ddbdfeffb1f9f1a7bae7e9df77ef 100
+*---------- Execução 4 -----------
+7eefe977df56fdbbfdf5d377cfb6bb7b 0
+7eefe977ff56fdbbf9f5d377efbee37b 34
+*---------- Execução 5 -----------
+75c5afdf7e7f97b5e9fa9db3fff9efef 96
+*---------- Execução 6 -----------
+77ffa75df5f79abdf4b67bffaf44baff 54
+77ffa75df5f69abdf4b67bffaf44beff 69
+*---------- Execução 7 -----------
+67ffeddff73ffdaff3e3daf3ebdffddf 87
+*---------- Execução 8 -----------
+4f19173bf8edffdfddfbaecbaddf7ff7 93
+4f59173bf8edffdfddfbaacbaddf7ff7 94
+*---------- Execução 9 -----------
+6fcbfdbdfbfa26efbc67ec75f5e27bbf 8
+6fcbfdbdfffb26efbc67ec75f5e27bbf 43
+*---------- Execução 10 -----------
+ffffffbb5bfbffdffffffffbffffffee 0
+ffffff737fffff77f7dffffbfffff5d7 0
+ffffffbb5bfbffdffffffffbffffffed 0
+afdbff7f6ffffffffffffff3ffffffff 0
+effddffffbfeffb93fdffff2fffbffff 0
+ffffffbbdbfbffdfffffffffffffffef 0
+fd7dfffdfff7f7f7bffff7ffbfdfffff 0
+ffffffef3dffffffbffffffffdffffff 0
+ffffff73ffffff77f7dffffffffff5d6 0
+fffdfcf7ffef7ffddffffffffffff9ff 0
+ffdefff7a3ffffff7dfdf7fff7ffbdff 0
+fffff7fffffffffff9efbf7f3fffffbf 0
+fe7befbaffffffffffffdf8effff7ffe 0
+afdbff7feffffffffffffff7fffffffd 0
+*---------- Execução 11 -----------
