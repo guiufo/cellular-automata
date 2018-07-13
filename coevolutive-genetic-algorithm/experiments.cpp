@@ -71,7 +71,7 @@ void experimentSharedRadius2(char *fileToWrite) {
     // Generate random, uniform distributed rows of 149 cells
     generateRows(rows, 100);
     // Calculate fitness of population
-    checkPopulation2(rows, population, 0, 99);
+    checkPopulationShared2(rows, population, 0, 99);
     // Sorts in ascending order
     insertionSort2(population, 0, 99);
     // Simple crossover and elitism
