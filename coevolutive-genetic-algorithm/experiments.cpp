@@ -216,18 +216,6 @@ void coevolutiveExperimentRadius3(char *fileToWrite) {
       );
       mutate3(population[i].cromossome);
       mutate3(population[i+1].cromossome);
-    }
-    // Realiza seleção, crossover e mutação nos reticulados
-    for(i=0; i<89; i+=2) {
-      // Select two random fathers among 10 best
-      randNumber1 = (rand() % 10) + 90;
-      randNumber2 = (rand() % 10) + 90;
-      while(randNumber1 == randNumber2) {
-        randNumber1 = (rand() % 10) + 90;
-        randNumber2 = (rand() % 10) + 90;
-      }
-      randFatherOne = randNumber1;
-      randFatherTwo = randNumber2;
       // Makes crossover
       crossOverRow(
         latticePopulation[randFatherOne].cromossome, latticePopulation[randFatherTwo].cromossome,
@@ -236,5 +224,18 @@ void coevolutiveExperimentRadius3(char *fileToWrite) {
       mutateLattice(latticePopulation[i].cromossome);
       mutateLattice(latticePopulation[i+1].cromossome);
     }
+  }
+  // End Genetic Algorithm
+
+  checkPopulationsRadius3(latticePopulation, population, 0, 99);
+  insertionSort3(population, 0, 99);
+  insertionSortLatticePopulation(latticePopulation, 0, 99);
+
+  // Print rules without repetition
+  for(i=0; i<100; i++) {
+    for(j=0; j<i; j++) {
+      if(getRule3(population[i]) == getRule3(population[j])) break;
+    }
+    if(i == j) printRule3(population[i], fileToWrite);
   }
 }
