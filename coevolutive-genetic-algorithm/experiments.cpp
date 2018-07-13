@@ -249,3 +249,4 @@ void coevolutiveExperimentRadius3(char *fileToWrite) {
       mutateLattice(latticePopulation[i+1].cromossome);
     }
   }
+}

@@ -89,7 +89,7 @@ void generateRowsPopulation(Lattice latticePopulation[], int number) {
   int i, j;
   double step = 1/number;
   double randNumber;
-  double pzero = step;
+  double pzero = 0.01;
 
   srand(time(NULL));
 

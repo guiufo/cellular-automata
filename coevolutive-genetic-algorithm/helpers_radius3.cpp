@@ -44,7 +44,7 @@ void checkPopulationsRadius3(Lattice latticePopulation[], Individual3 population
       }
       check = checkSync(syncRowOne, syncRowTwo);
       population[currentRule].fitness += check;
-      if(!check) latticePopulation[currentRow].fitness += check;
+      if(!check) latticePopulation[currentRow].fitness += 1;
     }
   }
 }
