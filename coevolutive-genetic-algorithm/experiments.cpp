@@ -186,3 +186,66 @@ void experimentRadius3(char *fileToWrite) {
     if(i == j) printHexRule3(population[i], fileToWrite);
   }
 }
+
+// Experimento coevolutivo com avaliação simples
+void coevolutiveExperimentRadius3(char *fileToWrite) {
+  Individual3 population[100];
+  Lattice latticePopulation[100];
+  int i, j, generation;
+  int rows[100][ROWSIZE];
+  int randFatherOne, randFatherTwo;
+  int randNumber1, randNumber2;
+
+  // Begin Genetic Algorithm
+  // Generate initial population
+  generateRules3(population, 100);
+  // Generate random, uniform distributed rows of 149 cells
+  generateRowsPopulation(latticePopulation, 100);
+
+  for(generation=0; generation<NGENERATIONS; generation++) {
+    // Calculate fitness of populations
+    checkPopulationsRadius3(latticePopulation, population, 0, 99);
+    // Sorts in ascending order
+    insertionSort3(population, 0, 99);
+    insertionSortLatticePopulation(latticePopulation, 0, 99);
+    // Simple crossover and elitism
+    srand(time(NULL));
+    // Realiza seleção, crossover e mutação nas regras
+    for(i=0; i<89; i+=2) {
+      // Select two random fathers among 10 best
+      randNumber1 = (rand() % 10) + 90;
+      randNumber2 = (rand() % 10) + 90;
+      while(randNumber1 == randNumber2) {
+        randNumber1 = (rand() % 10) + 90;
+        randNumber2 = (rand() % 10) + 90;
+      }
+      randFatherOne = randNumber1;
+      randFatherTwo = randNumber2;
+      // Makes crossover
+      crossOver3(
+        population[randFatherOne].cromossome, population[randFatherTwo].cromossome,
+        population[i].cromossome, population[i+1].cromossome
+      );
+      mutate3(population[i].cromossome);
+      mutate3(population[i+1].cromossome);
+    }
+    // Realiza seleção, crossover e mutação nos reticulados
+    for(i=0; i<89; i+=2) {
+      // Select two random fathers among 10 best
+      randNumber1 = (rand() % 10) + 90;
+      randNumber2 = (rand() % 10) + 90;
+      while(randNumber1 == randNumber2) {
+        randNumber1 = (rand() % 10) + 90;
+        randNumber2 = (rand() % 10) + 90;
+      }
+      randFatherOne = randNumber1;
+      randFatherTwo = randNumber2;
+      // Makes crossover
+      crossOverRow(
+        latticePopulation[randFatherOne].cromossome, latticePopulation[randFatherTwo].cromossome,
+        latticePopulation[i].cromossome, latticePopulation[i+1].cromossome
+      );
+      mutateLattice(latticePopulation[i].cromossome);
+      mutateLattice(latticePopulation[i+1].cromossome);
+    }
+  }
