@@ -117,6 +117,21 @@ void insertionSort2(Individual2 population[], int initIndex, int endIndex) {
   }
 }
 
+// Insertion sort in ascending order
+void insertionSortLatticePopulation(Lattice population[], int initIndex, int endIndex) {
+  int i, key, j;
+  Lattice keyStruct;
+  for (i = initIndex+1; i <= endIndex; i++) {
+    keyStruct = population[i];
+    j = i-1;
+    while (j >= 0 && population[j].fitness > keyStruct.fitness) {
+      population[j+1] = population[j];
+      j = j-1;
+    }
+    population[j+1] = keyStruct;
+  }
+}
+
 // Print rule in binary
 void printBinaryRule2(int rule[], char *fileToWrite) {
   FILE *fp;
