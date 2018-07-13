@@ -99,18 +99,6 @@ void coevolutiveExperimentRadius2(char *fileToWrite) {
       );
       mutate2(population[i].cromossome);
       mutate2(population[i+1].cromossome);
-    }
-    // Realiza seleção, crossover e mutação nos reticulados
-    for(i=0; i<89; i+=2) {
-      // Select two random fathers among 10 best
-      randNumber1 = (rand() % 10) + 90;
-      randNumber2 = (rand() % 10) + 90;
-      while(randNumber1 == randNumber2) {
-        randNumber1 = (rand() % 10) + 90;
-        randNumber2 = (rand() % 10) + 90;
-      }
-      randFatherOne = randNumber1;
-      randFatherTwo = randNumber2;
       // Makes crossover
       crossOverRow(
         latticePopulation[randFatherOne].cromossome, latticePopulation[randFatherTwo].cromossome,

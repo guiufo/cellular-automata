@@ -53,7 +53,7 @@ void checkPopulationsRadius2(Lattice latticePopulation[], Individual2 population
 }
 
 // Runs a rule against an array of initial rows and calculate its fitness
-void checkPopulation2Shared(int rows[][ROWSIZE], Individual2 population[], int initIndex, int endIndex) {
+void checkPopulationShared2(int rows[][ROWSIZE], Individual2 population[], int initIndex, int endIndex) {
   int syncRowOne[ROWSIZE];
   int syncRowTwo[ROWSIZE];
   int initialRow[ROWSIZE];
