@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
   fp = fopen(argv[1], "a");
   fprintf(fp, "*************************************\n");
   fprintf(fp, "*\t\t%d Execuções de Raio %d\n", experiments, radius);
-  fprintf(fp, "*************************************\n*\n");
+  fprintf(fp, "*************************************\n");
   fprintf(fp, "*\n");
   fprintf(fp, "*\t\tNúmero de gerações: %d\n", NGENERATIONS);
   fprintf(fp, "*\t\tReticulados iniciais: %d\n", NROWS);
