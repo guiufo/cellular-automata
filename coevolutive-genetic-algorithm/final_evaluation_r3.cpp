@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
 
   binArray = hexToBinArray(argv[1]);
   for(i=0; i<128; i++) intArray[127-i] = (int) binArray[i] - 48;
-  generateRandomRows(rows, ROWS);
+  generateRandomRows(rows, ROWS, 1);
 
   for(i=0; i<ROWS; i++) {
     memcpy(initialRow, rows[i], ROWSIZE*sizeof(int));

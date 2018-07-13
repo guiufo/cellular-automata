@@ -92,7 +92,7 @@ void scrollRule2(int *rule, int numberOfRows) {
   Individual2 population[1];
   int row[1][ROWSIZE];
   unsigned int microseconds = 30000;
-  generateRows(row, 1);
+  generateRandomRows(row, 1, 0);
   generateRules2(population, 1);
   memcpy(population[0].cromossome, rule, 32*sizeof(int));
   for(int i=0; i<numberOfRows;i++){
@@ -168,7 +168,8 @@ int64_t getRule2(Individual2 rule) {
 
 int* intToBinArray(char *input) {
   int number, i, r;
-  int *binArray = (int *) malloc( 32 * sizeof(int));
+  int *binArray = (int *) calloc(32, sizeof(int));
+  int temp[32];
 
   number = strtol(input, NULL, 10);
 
@@ -181,6 +182,9 @@ int* intToBinArray(char *input) {
       break;
     }
   }
+
+  // for(i=0; i<32; i++) temp[31-i] = binArray[i];
+  // for(i=0; i<32; i++) binArray[i] = temp[i];
 
   return binArray;
 }

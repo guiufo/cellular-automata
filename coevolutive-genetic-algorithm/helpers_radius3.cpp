@@ -25,7 +25,7 @@ void scrollRule3(int *rule, int numberOfRows) {
   Individual3 population[1];
   int row[1][ROWSIZE];
   unsigned int microseconds = 30000;
-  generateRows(row, 1);
+  generateRandomRows(row, 1, 0);
   generateRules3(population, 1);
   memcpy(population[0].cromossome, rule, 128*sizeof(int));
   for(int i=0; i<numberOfRows;i++){

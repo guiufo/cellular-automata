@@ -4,17 +4,21 @@
 #define ROWS 10000
 
 int main(int argc, char *argv[]) {
-  int *binArray = (int *) malloc( 32 * sizeof(int));
+  int *binArray = (int *) calloc(32, sizeof(int));
   int rows[ROWS][ROWSIZE];
   int i, j;
   int syncRowOne[ROWSIZE];
   int syncRowTwo[ROWSIZE];
   int initialRow[ROWSIZE];
   // Número para contagem de sincronizações em 10.000 reticulados
-  float counter = 0;
+  int counter = 0;
 
   binArray = intToBinArray(argv[1]);
-  generateRandomRows(rows, ROWS);
+  for(i=0; i<32; i++) {
+    printf("%d", binArray[i]);
+  }
+  printf("\n");
+  generateRandomRows(rows, ROWS, 1);
 
   for(i=0; i<ROWS; i++) {
     memcpy(initialRow, rows[i], ROWSIZE*sizeof(int));
@@ -27,7 +31,8 @@ int main(int argc, char *argv[]) {
   }
 
   free(binArray);
-  printf("%s\t%06.2f%%\n", argv[1], counter/100);
+  printf("Counter: %d\n", counter);
+  printf("%s %d\n", argv[1], counter);
 
   return 0;
 }

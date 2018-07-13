@@ -9,7 +9,7 @@ void generateRules2(Individual2 population[], int size) {
   int i, j;
   double step = 1/size;
   double randNumber;
-  double pzero = 0.1;
+  double pzero = step;
 
   srand(time(NULL));
   for (i = 0; i < size; ++i) {
@@ -38,7 +38,7 @@ void generateRules3(Individual3 population[], int size) {
   int i, j;
   double step = 1/size;
   double randNumber;
-  double pzero = 0.1;
+  double pzero = 0.01;
 
   srand(time(NULL));
   for (i = 0; i < size; ++i) {
@@ -70,7 +70,7 @@ void generateRows(int rows[][ROWSIZE], int number) {
   int i, j;
   double step = 1/number;
   double randNumber;
-  double pzero = 0.1;
+  double pzero = 0.01;
 
   srand(time(NULL));
 
@@ -80,6 +80,7 @@ void generateRows(int rows[][ROWSIZE], int number) {
       if(randNumber > pzero) rows[i][j] = 1;
       else rows[i][j] = 0;
     }
+    pzero += step;
   }
 }
 
@@ -88,7 +89,7 @@ void generateRowsPopulation(Lattice latticePopulation[], int number) {
   int i, j;
   double step = 1/number;
   double randNumber;
-  double pzero = 0.1;
+  double pzero = step;
 
   srand(time(NULL));
 
@@ -98,14 +99,16 @@ void generateRowsPopulation(Lattice latticePopulation[], int number) {
       if(randNumber > pzero) latticePopulation[i].cromossome[j] = 1;
       else latticePopulation[i].cromossome[j] = 1;
     }
+    pzero += step;
   }
 }
 
 // Generate random rows
-void generateRandomRows(int rows[][ROWSIZE], int number) {
+void generateRandomRows(int rows[][ROWSIZE], int number, int fixedSeed) {
   int i, j;
   // Usando seed fixo para manter consistência entre experimentos
-  srand(1);
+  if(fixedSeed) srand(fixedSeed);
+  else srand(time(NULL));
   for (i = 0; i < number; ++i) {
     for (j = 0; j < ROWSIZE; j++) {
       rows[i][j] = rand()%2;
