@@ -88,7 +88,7 @@ void generateRows(int rows[][ROWSIZE], int number) {
 void generateRandomRows(int rows[][ROWSIZE], int number) {
   int i, j;
   // Usando seed fixo para manter consistência entre experimentos
-  srand(1);
+  srand(time(NULL));
   for (i = 0; i < number; ++i) {
     for (j = 0; j < ROWSIZE; j++) {
       rows[i][j] = rand()%2;

@@ -1,0 +1,82 @@
+*************************************
+*		5 Execuções de Raio 3
+*************************************
+*
+*
+*		Número de gerações: 10
+*		Reticulados iniciais: 100
+*		Taxa de mutação: 0.016000
+*
+*---------- Execução 1 -----------
+1ffb7f4ffbd4bafffff977fdffdfffdf 51
+*---------- Execução 2 -----------
+dacffe3fafff76efff7fffbfffdbfeff 0
+ffbffffffd7ffebff6fffdf7cfffbdd7 0
+dacffe3fbffffaffffffdffdffffefff 0
+effefffffd7ffebff6fffdf7cfffbdd7 0
+dacffe3fbd7fffbff6fffdf7cfffbdd7 0
+fffffffffffefbffff7ffffbffff7fff 0
+fffffdf7ffcfffdffaffebdd7ffbff7f 0
+fffbfffbfffdf7fffbdfffbffffffeff 0
+fbffffdfdfffbfe7fffffffffffefffb 0
+fefdffffdf7ffbf7fffdfee5bfffff9f 0
+ffbfffffefff77efff7fffbfffdbfeff 0
+7ffffbdfe7fffdffbfefefffbdfff7ef 0
+effefffffffffbffffffdffdffffefff 0
+fbffffbfffffefedffefffffffffffff 0
+*---------- Execução 3 -----------
+bffff5ffeffff7fffffcfeefefb5ffbf 0
+be3ff7ffff99fdf7ff1ffff7fdb5fbf7 0
+bffff7ffff53ffffff9fcbbffe35fffb 0
+fdfef7ffff99fdf7ff1ffff7fdb5fbf7 0
+bffe7fbdeffbfddfeffffcfbfffbdfff 0
+be3ffdffeffff7ffffdcfeefefffffbf 0
+7fffeffffffffeffffdfffffffffb7bf 0
+ffffdffffbfbf5cfffffef7ffbdfffbd 0
+fffffffff1fffffffffffdeffffaffef 0
+efffbbfffbfffffbdffffffefffff5df 0
+bfbfdfeecfffffedffffffdffffeffff 0
+fdfeffffff53ffffffbfcbbffe7ffffb 0
+bfffffffff99fdf7ff3ffff7fdfffbf7 0
+dff76f7fffffefefffbffff6effffffb 0
+*---------- Execução 4 -----------
+7fff7fffffeffd3ffb77ffeffffaf7af 5
+7dffefbf7fedfff7ff7ff75bfff7ffff 25
+*---------- Execução 5 -----------
+*************************************
+*		5 Execuções de Raio 3
+*************************************
+*
+*		Número de gerações: 10
+*		Reticulados iniciais: 100
+*		Taxa de mutação: 0.016000
+*
+*---------- Execução 1 -----------
+002240012d3c87e9202c29a8fb4b06c1 10
+002240012d3c87e9302c29a8fb4b06c1 10
+002040050d3c87e9302c29a8fb4b06c1 10
+002040850d3c87e9302c29b04661c081 13
+0020400100020009502c29a8fb4b06c3 40
+00224001000608094010001046618001 43
+002240810006080940100008fb4b4641 61
+*---------- Execução 2 -----------
+1d66400100d8f27f3b7fbfbdf3ffffff 67
+*---------- Execução 3 -----------
+07130140022102010111a00044006a33 8
+07130140022102010011a00040006a33 11
+*---------- Execução 4 -----------
+1e426e10f041211b2aa1953ad69d111f 1
+710764346046c1402310318890230c3f 1
+732af4537a5e438ff14dfc22d5d96e5b 1
+35537c4bb5242fcc4bcb7fe3131d565f 1
+4302a148465c483bee6d61f50271c25d 1
+1e426e10f041211b2aa195bad69d131f 1
+710764346046c1402310310890230e3f 1
+001022808c5389b12041112a44102001 1
+2844ea0081288120440c024104015069 1
+4a09328c63020a008081404322810401 1
+2a04242e00806c008800818001880011 1
+7ff7fefbfff3feffffffaf5fff3ffdff 11
+7ff7fefbfff3feffffffafdfff3fffff 11
+*---------- Execução 5 -----------
+110140cd4003ef775ffddff5ffaffeef 34

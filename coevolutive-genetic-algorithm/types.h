@@ -19,7 +19,7 @@
 #define ROWSIZE 149
 #define RULESIZE2 32
 #define RULESIZE3 128
-#define NGENERATIONS 100
+#define NGENERATIONS 10
 #define NROWS 100
 
 #define MUTATIONRATE 0.016
