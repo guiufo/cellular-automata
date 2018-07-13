@@ -7,7 +7,7 @@
 // Generate uniform distributed rules of radius 2
 void generateRules2(Individual2 population[], int size) {
   int i, j;
-  double step = 1.0/size;
+  double step = 1.0/(size - 1);
   double randNumber;
   double pzero = 0;
 
@@ -36,7 +36,7 @@ void generateRandomRules2(Individual2 population[], int size) {
 // Generate uniform distributed rules of radius 3
 void generateRules3(Individual3 population[], int size) {
   int i, j;
-  double step = 1.0/size;
+  double step = 1.0/(size - 1);
   double randNumber;
   double pzero = 0;
 
@@ -68,7 +68,7 @@ void generateRandomRules3(Individual3 population[], int size) {
 // Generate uniform distributed random rows
 void generateRows(int rows[][ROWSIZE], int number) {
   int i, j;
-  double step = 1.0/number;
+  double step = 1.0/(number - 1);
   double randNumber;
   double pzero = 0;
 
