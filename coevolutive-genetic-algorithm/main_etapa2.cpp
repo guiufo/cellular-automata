@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
     fprintf(fp, "*---------- Execução %d -----------\n", i+1);
     fclose(fp);
     if(radius == 2) experimentSharedRadius2(argv[1]);
-    if(radius == 3) experimentRadius3(argv[1]);
+    if(radius == 3) experimentSharedRadius3(argv[1]);
   }
 
   return 0;

@@ -7,25 +7,16 @@
 *		Taxa de mutação: 0.016000
 *
 *---------- Execução 1 -----------
-5135129607ff4fd7bf37e83ffd9f85ff 70
-5135129e07ff4fd7bf37e8bffddf85ff 80
+5135129607ff4fd7bf37e83ffd9f85ff 70 044.70%
+5135129e07ff4fd7bf37e8bffddf85ff 80 050.52%
 *---------- Execução 2 -----------
-1dbf7d7ff3ff757ffbd7ef7ddffff7df 55
+1dbf7d7ff3ff757ffbd7ef7ddffff7df 55 028.13%
 *---------- Execução 3 -----------
-654101bfcd7f7dedafcff5ff7fdff7fb 73
+654101bfcd7f7dedafcff5ff7fdff7fb 73 059.58%
 654101bfc57f7dedafcff5ff7fdff7fb 84
 *---------- Execução 4 -----------
 000400110000884210040000a9006549 13
 000400110000884210040008a9006549 39
-*---------- Execução 5 -----------
-*************************************
-*		25 Execuções de Raio 3
-*************************************
-*
-*		Número de gerações: 100
-*		Reticulados iniciais: 100
-*		Taxa de mutação: 0.016000
-*
 *---------- Execução 1 -----------
 18522010487120020008202000800c01 2
 10520010487120020008200000800c01 6

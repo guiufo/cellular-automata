@@ -20,6 +20,44 @@ void checkPopulation3(int rows[][ROWSIZE], Individual3 population[], int initInd
   }
 }
 
+// Runs a rule against an array of initial rows and calculate its fitness
+void checkPopulationShared3(int rows[][ROWSIZE], Individual3 population[], int initIndex, int endIndex) {
+  int syncRowOne[ROWSIZE];
+  int syncRowTwo[ROWSIZE];
+  int initialRow[ROWSIZE];
+  int i, j, check, currentRule, currentRow, currentStep;
+  int shared[101][101] = {0};
+  // Reset fitness
+  for(i=0; i<100; i++) population[i].fitness = 0;
+  for(currentRule=initIndex; currentRule<=endIndex; currentRule++) {
+    // Executa uma regra sobre os 100 reticulados
+    for(currentRow=0; currentRow<100; currentRow++) {
+      memcpy(initialRow, rows[currentRow], ROWSIZE*sizeof(int));
+      // Evolui o autômato celular 300 vezes
+      for(currentStep=0; currentStep<300; currentStep++) {
+        nextRow3(initialRow, population[currentRule].cromossome);
+        if(currentStep == 298) memcpy(syncRowOne, initialRow, ROWSIZE*sizeof(int));
+        if(currentStep == 299) memcpy(syncRowTwo, initialRow, ROWSIZE*sizeof(int));
+      }
+      // Preenche matriz de recurso compartilhado
+      check = checkSync(syncRowOne, syncRowTwo);
+      shared[currentRow][currentRule] = check;
+      if(check == 0) shared[currentRow][100] += 1;
+      shared[100][currentRule] += check;
+    }
+  }
+
+  // Preenche fitness de acordo com recurso compartilhado
+  for(i=0; i<100; i++) {
+    for(j=0; j<100; j++) {
+      if(shared[i][j]) {
+        population[j].fitness += shared[i][100];
+      }
+    }
+  }
+
+}
+
 // Scroll given rule 3 for numberOfRow times
 void scrollRule3(int *rule, int numberOfRows) {
   Individual3 population[1];
